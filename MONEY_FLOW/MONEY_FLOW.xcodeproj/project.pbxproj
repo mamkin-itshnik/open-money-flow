@@ -7,9 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CED6E629278881E300051441 /* RecordEditorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED6E628278881E300051441 /* RecordEditorController.swift */; };
+		CED6E62C2788831200051441 /* HistoryControlllerBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED6E62B2788831200051441 /* HistoryControlllerBuilder.swift */; };
+		CED6E62F27889A4500051441 /* HistoryTableDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED6E62E27889A4500051441 /* HistoryTableDelegate.swift */; };
+		CED6E6312788A19F00051441 /* MainTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED6E6302788A19F00051441 /* MainTabBar.swift */; };
 		CEF4C57A2785F36A003316E4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF4C5792785F36A003316E4 /* AppDelegate.swift */; };
 		CEF4C57C2785F36A003316E4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF4C57B2785F36A003316E4 /* SceneDelegate.swift */; };
-		CEF4C57E2785F36A003316E4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF4C57D2785F36A003316E4 /* ViewController.swift */; };
+		CEF4C57E2785F36A003316E4 /* HistoryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF4C57D2785F36A003316E4 /* HistoryController.swift */; };
 		CEF4C5842785F36A003316E4 /* MONEY_FLOW.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CEF4C5822785F36A003316E4 /* MONEY_FLOW.xcdatamodeld */; };
 		CEF4C5862785F372003316E4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEF4C5852785F372003316E4 /* Assets.xcassets */; };
 		CEF4C5892785F372003316E4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEF4C5872785F372003316E4 /* LaunchScreen.storyboard */; };
@@ -17,10 +21,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CED6E628278881E300051441 /* RecordEditorController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordEditorController.swift; sourceTree = "<group>"; };
+		CED6E62B2788831200051441 /* HistoryControlllerBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryControlllerBuilder.swift; sourceTree = "<group>"; };
+		CED6E62E27889A4500051441 /* HistoryTableDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTableDelegate.swift; sourceTree = "<group>"; };
+		CED6E6302788A19F00051441 /* MainTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBar.swift; sourceTree = "<group>"; };
 		CEF4C5762785F36A003316E4 /* MONEY_FLOW.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MONEY_FLOW.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEF4C5792785F36A003316E4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CEF4C57B2785F36A003316E4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		CEF4C57D2785F36A003316E4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CEF4C57D2785F36A003316E4 /* HistoryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryController.swift; sourceTree = "<group>"; };
 		CEF4C5832785F36A003316E4 /* MONEY_FLOW.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MONEY_FLOW.xcdatamodel; sourceTree = "<group>"; };
 		CEF4C5852785F372003316E4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CEF4C5882785F372003316E4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -39,6 +47,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CED6E62A278882E300051441 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				CED6E62B2788831200051441 /* HistoryControlllerBuilder.swift */,
+				CED6E62E27889A4500051441 /* HistoryTableDelegate.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		CED6E62D278899D400051441 /* Subviews */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Subviews;
+			sourceTree = "<group>";
+		};
 		CEF4C56D2785F36A003316E4 = {
 			isa = PBXGroup;
 			children = (
@@ -63,7 +87,6 @@
 				CEF4C5922785F4B3003316E4 /* BuisinessRules */,
 				CEF4C5792785F36A003316E4 /* AppDelegate.swift */,
 				CEF4C57B2785F36A003316E4 /* SceneDelegate.swift */,
-				CEF4C57D2785F36A003316E4 /* ViewController.swift */,
 				CEF4C5852785F372003316E4 /* Assets.xcassets */,
 				CEF4C5872785F372003316E4 /* LaunchScreen.storyboard */,
 				CEF4C58A2785F372003316E4 /* Info.plist */,
@@ -75,6 +98,10 @@
 		CEF4C5902785F3D5003316E4 /* HistoryEditor */ = {
 			isa = PBXGroup;
 			children = (
+				CED6E62D278899D400051441 /* Subviews */,
+				CED6E62A278882E300051441 /* Extensions */,
+				CEF4C57D2785F36A003316E4 /* HistoryController.swift */,
+				CED6E628278881E300051441 /* RecordEditorController.swift */,
 			);
 			path = HistoryEditor;
 			sourceTree = "<group>";
@@ -90,6 +117,7 @@
 			isa = PBXGroup;
 			children = (
 				CEF4C5902785F3D5003316E4 /* HistoryEditor */,
+				CED6E6302788A19F00051441 /* MainTabBar.swift */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -172,9 +200,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CEF4C57E2785F36A003316E4 /* ViewController.swift in Sources */,
+				CED6E6312788A19F00051441 /* MainTabBar.swift in Sources */,
+				CED6E62C2788831200051441 /* HistoryControlllerBuilder.swift in Sources */,
+				CEF4C57E2785F36A003316E4 /* HistoryController.swift in Sources */,
+				CED6E62F27889A4500051441 /* HistoryTableDelegate.swift in Sources */,
 				CEF4C57A2785F36A003316E4 /* AppDelegate.swift in Sources */,
 				CEF4C5842785F36A003316E4 /* MONEY_FLOW.xcdatamodeld in Sources */,
+				CED6E629278881E300051441 /* RecordEditorController.swift in Sources */,
 				CEF4C57C2785F36A003316E4 /* SceneDelegate.swift in Sources */,
 				CEF4C5972785F805003316E4 /* MoneyRecord.swift in Sources */,
 			);
