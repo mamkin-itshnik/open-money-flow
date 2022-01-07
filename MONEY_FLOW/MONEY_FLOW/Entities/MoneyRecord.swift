@@ -7,12 +7,16 @@
 
 import Foundation
 
-enum MoneyEvent{
+enum MoneyEvent: String{
     case income
     case outcome
 }
 
-struct MoneyRecord{
+struct MoneyRecord: CustomStringConvertible{
+    var description: String  {
+        return "\(type.rawValue) \(value)$ in \(category) on \(date)"
+    }
+    
     var type: MoneyEvent
     var value: Double
     var category: String

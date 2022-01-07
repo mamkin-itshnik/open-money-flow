@@ -20,7 +20,7 @@ extension HistoryOfRecordScreen: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         
-        cell.textLabel?.text = data[indexPath.row]
+        cell.textLabel?.text = data[indexPath.row].description
         cell.contentView.transform = CGAffineTransform(scaleX: 1, y: -1)
         
         return cell
