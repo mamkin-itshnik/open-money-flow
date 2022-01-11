@@ -102,12 +102,12 @@
 			path = Presenter;
 			sourceTree = "<group>";
 		};
-		CED6E6392788F23D00051441 /* Worker */ = {
+		CED6E6392788F23D00051441 /* HistoryWorker */ = {
 			isa = PBXGroup;
 			children = (
 				CED6E63A2788F26900051441 /* HistoryWorker.swift */,
 			);
-			path = Worker;
+			path = HistoryWorker;
 			sourceTree = "<group>";
 		};
 		CED6E63C2788F37C00051441 /* DataFetcher */ = {
@@ -155,9 +155,9 @@
 		CEF4C5782785F36A003316E4 /* MONEY_FLOW */ = {
 			isa = PBXGroup;
 			children = (
-				CEF4C5942785F634003316E4 /* Presentation */,
+				CEF4C5942785F634003316E4 /* Screens */,
 				CEF4C5952785F6B8003316E4 /* Entities */,
-				CEF4C5922785F4B3003316E4 /* WorkersRealisations */,
+				CEF4C5922785F4B3003316E4 /* Workers */,
 				CEF4C5792785F36A003316E4 /* AppDelegate.swift */,
 				CEF4C57B2785F36A003316E4 /* SceneDelegate.swift */,
 				CEF4C5852785F372003316E4 /* Assets.xcassets */,
@@ -171,7 +171,7 @@
 		CEF4C5902785F3D5003316E4 /* HistoryEditor */ = {
 			isa = PBXGroup;
 			children = (
-				CED6E6392788F23D00051441 /* Worker */,
+				CED6E6392788F23D00051441 /* HistoryWorker */,
 				CED6E6362788F16D00051441 /* Presenter */,
 				CED6E6332788F02700051441 /* Interactor */,
 				CED6E6322788EFFD00051441 /* View */,
@@ -179,21 +179,21 @@
 			path = HistoryEditor;
 			sourceTree = "<group>";
 		};
-		CEF4C5922785F4B3003316E4 /* WorkersRealisations */ = {
+		CEF4C5922785F4B3003316E4 /* Workers */ = {
 			isa = PBXGroup;
 			children = (
 				CED6E63C2788F37C00051441 /* DataFetcher */,
 			);
-			path = WorkersRealisations;
+			path = Workers;
 			sourceTree = "<group>";
 		};
-		CEF4C5942785F634003316E4 /* Presentation */ = {
+		CEF4C5942785F634003316E4 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
 				CEF4C5902785F3D5003316E4 /* HistoryEditor */,
 				CED6E6302788A19F00051441 /* MainTabBar.swift */,
 			);
-			path = Presentation;
+			path = Screens;
 			sourceTree = "<group>";
 		};
 		CEF4C5952785F6B8003316E4 /* Entities */ = {

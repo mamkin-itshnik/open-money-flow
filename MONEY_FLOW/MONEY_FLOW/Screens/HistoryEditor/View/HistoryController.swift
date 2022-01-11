@@ -8,8 +8,16 @@
 import UIKit
 protocol HistoryViewControllerProtocol{
     var data: [MoneyRecord] { get set }
+    func needUpdData()
 }
 class HistoryOfRecordScreen: UIViewController, HistoryViewControllerProtocol {
+    
+    
+    func needUpdData() {
+        print("___needUpdData")
+        tableView.reloadData()
+    }
+    
     
     //MARK: something wrong. data copy every operation (upd/add/dell etc)
     var data: [MoneyRecord] = [] {
@@ -36,13 +44,18 @@ class HistoryOfRecordScreen: UIViewController, HistoryViewControllerProtocol {
     
     func setUpDependency(){
        
+        
         interactor = HistoryInteractor()
-        interactor?.dataWorker = DataFetcher()
+        let dataFetcher = DataFetcher()
+        //MARK: cycle strong ref ALARM!!!
+        dataFetcher.historyInteractor = interactor
+        interactor?.dataWorker = dataFetcher
+        
+        interactor?.setInteractorDependency(dataRef: dataFetcher.dataSource?.allDataReference ?? [])
         
         let historyPresenter = HistoryPresenter()
         
         interactor?.presenter = historyPresenter
-        interactor?.dataWorker?.presenter = historyPresenter
         interactor?.presenter?.viewController = self
 
     }
