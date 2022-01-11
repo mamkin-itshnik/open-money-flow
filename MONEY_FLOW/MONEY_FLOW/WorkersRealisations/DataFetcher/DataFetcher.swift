@@ -8,14 +8,34 @@
 import Foundation
 
 protocol DataSourceProtocol{
-    func getAllRecord() -> [MoneyRecord]?
+    func fetchAllRecord()
+    func addRecord(_: MoneyRecord)
+    var reciveAllData: (([MoneyRecord]) -> ())? { get set }
 }
 
 class DataFetcher: HistoryWorkerProtocol{
     
-    var dataSource: DataSourceProtocol? = TestDataSource()
+    var reciveAllData: (([MoneyRecord]) -> ())?
     
-    func getAllMoneyFlowRecords(_ result: ([MoneyRecord]?) -> ()) {
-        result(dataSource?.getAllRecord())
+    var presenter: HistoryPresenterProtocol? = nil {
+        didSet{
+            print("___ dataSource?.reciveAllData = presenter?.reciveAllData")
+            dataSource?.reciveAllData = presenter?.reciveAllData
+        }
+    }
+    
+    var dataSource: DataSourceProtocol?
+    
+    init(){
+        dataSource = TestDataSource()
+    }
+   
+    func fetchAllData() {
+        print("__start fetchAllData in DataFetcher")
+        dataSource?.fetchAllRecord()
+    }
+    
+    func addRecord(_ rec: MoneyRecord) {
+        dataSource?.addRecord(rec)
     }
 }

@@ -8,6 +8,11 @@
 import Foundation
 
 protocol HistoryWorkerProtocol{
-    func getAllMoneyFlowRecords(_: ([MoneyRecord]?)->()) //:  [MoneyRecord]?->())
+    
+    var presenter: HistoryPresenterProtocol? { get set }
+    var reciveAllData: (([MoneyRecord]) -> ())? { get set }
+    
+    func fetchAllData() //:  [MoneyRecord]?->())
+    func addRecord(_: MoneyRecord)
 }
 

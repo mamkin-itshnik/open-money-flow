@@ -30,13 +30,15 @@ class HistoryOfRecordScreen: UIViewController, HistoryViewControllerProtocol {
     
     func setUpDependency(){
        
-        let hInter = HistoryInteractor()
-        hInter.dataFetcher = DataFetcher()
+        interactor = HistoryInteractor()
+        interactor?.dataWorker = DataFetcher()
         
-        interactor = hInter
+        let historyPresenter = HistoryPresenter()
         
-        interactor?.presenter = HistoryPresenter()
+        interactor?.presenter = historyPresenter
+        interactor?.dataWorker?.presenter = historyPresenter
         interactor?.presenter?.viewController = self
+
     }
     
     @objc func addTask(){
