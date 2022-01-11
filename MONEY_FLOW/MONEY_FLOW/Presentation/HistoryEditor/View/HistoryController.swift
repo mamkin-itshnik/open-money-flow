@@ -11,6 +11,7 @@ protocol HistoryViewControllerProtocol{
 }
 class HistoryOfRecordScreen: UIViewController, HistoryViewControllerProtocol {
     
+    //MARK: something wrong. data copy every operation (upd/add/dell etc)
     var data: [MoneyRecord] = [] {
         didSet{
             tableView.reloadData()
