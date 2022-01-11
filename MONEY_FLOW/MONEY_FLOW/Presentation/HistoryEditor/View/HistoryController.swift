@@ -11,7 +11,12 @@ protocol HistoryViewControllerProtocol{
 }
 class HistoryOfRecordScreen: UIViewController, HistoryViewControllerProtocol {
     
-    var data: [MoneyRecord] = []
+    var data: [MoneyRecord] = [] {
+        didSet{
+            tableView.reloadData()
+            print("___data count = \(data.count)")
+        }
+    }
     var interactor: HistoryInteractorProtocol?
     
     lazy var addRecordButton = makeAddRecordButton()
@@ -42,9 +47,9 @@ class HistoryOfRecordScreen: UIViewController, HistoryViewControllerProtocol {
     }
     
     @objc func addTask(){
-       // data.insert("new element", at: 0)
-        tableView.reloadData()
-        print("___data count = \(data.count)")
+        let emptyRecord = MoneyRecord(type: .income, value: 777, category: "drink", date: 333)
+        interactor?.addRecord(emptyRecord)
+        
     }
     
 }
